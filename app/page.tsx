@@ -1,9 +1,9 @@
 const Home = () => {
-  const name: string = "Abinash";
+  const name: string = "Welcome To new Journy";
   return (
-    <h1 className="text-2xl font-semibold flex text-white min-h-screen justify-center  items-center">
-      {name}
-    </h1>
+    <div className="flex flex-1 h-full justify-center items-center">
+      <h1 className="text-2xl font-semibold text-white">{name}</h1>
+    </div>
   );
 };
 

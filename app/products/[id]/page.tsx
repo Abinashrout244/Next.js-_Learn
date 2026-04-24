@@ -21,7 +21,7 @@ export default async function ProductPage({
   const product = products.find((p) => p.id === Number(id));
   if (!product) return <h1>Product not found</h1>;
   return (
-    <div className="min-h-screen  flex flex-col gap-3 justify-center items-center">
+    <div className=" flex flex-col gap-3 justify-center items-center">
       <Link href={"/products"}>
         <button className=" px-5 py-2 rounded-4xl bg-white text-black">
           Back
