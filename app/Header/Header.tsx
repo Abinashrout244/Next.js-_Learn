@@ -20,8 +20,13 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-gray-300">
-              Contact
+            <Link href="/login" className="hover:text-gray-300">
+              Login
+            </Link>
+          </li>
+          <li>
+            <Link href="/register" className="hover:text-gray-300">
+              signup
             </Link>
           </li>
         </ul>
