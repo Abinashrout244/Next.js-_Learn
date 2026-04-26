@@ -1,4 +1,18 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+type Props = {
+  params: Promise<{ id: string }>;
+};
+
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const { id } = await params;
+  return {
+    title: `Product ${id}`,
+  };
+};
 
 type Product = {
   id: number;
@@ -12,11 +26,7 @@ const products: Product[] = [
   { id: 3, name: "DSLr Camera", price: "$99" },
 ];
 
-export default async function ProductPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
+export default async function ProductPage({ params }: Props) {
   const { id } = await params;
   const product = products.find((p) => p.id === Number(id));
   if (!product) return <h1>Product not found</h1>;
